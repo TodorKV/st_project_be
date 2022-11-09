@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: Todor Valkov
+      preConditions:
+        onFail: MARK_RAN
+        not:
+          - tableExists:
+              - tableName: orders
+      changes:
+        - createTable:
+            tableName: orders
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: priority
+                  type: character varying(100)
+              - column:
+                  name: description
+                  type: character varying(255)
+              - column:
+                  name: photos
+                  type: character varying(255)
+              - column:
+                  name: tenant_id
+                  type: character varying(100)
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_tenant_id_orders
+                    references: tenants(id)
+              - column:
+                  name: product_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_product_id_orders
+                    references: products(id)

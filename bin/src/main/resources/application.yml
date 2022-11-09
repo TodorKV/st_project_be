@@ -1,0 +1,25 @@
+server:
+    port: 8080
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/ordero_db_v3
+        username: postgres
+        password: Bor^nsG4!
+    liquibase:
+        change-log: classpath:db/changelog/db-changelog.yml
+    jpa:
+        hibernate:
+            ddl-auto: none
+        show-sql: true
+        database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    data:
+        rest:
+            base-path: "/api/v2"
+            detection-strategy: annotated
+    web:
+        resources:
+            static-locations: file:/Users/c-trust1/TU/java_course_project/ordero_be/order-photos
+
+springdoc:
+    swagger-ui:
+        path: /swagger-ui
