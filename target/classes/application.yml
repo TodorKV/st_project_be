@@ -5,9 +5,10 @@ spring:
     ansi:
       enabled: always
   datasource:
-    url: jdbc:postgresql://localhost:5432/stbe_db
+    #postgresql://containers-us-west-72.railway.app:6428/railway
+    url: jdbc:postgresql://containers-us-west-72.railway.app:6428/railway
     username: postgres
-    password: root
+    password: H6CoSwgZsSQBHSXG3tbf
   liquibase:
     change-log: classpath:db/changelog/db-changelog.yml
   jpa:
