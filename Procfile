@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/ordero-1.1.jar
+web: java -Dserver.port=$PORT -jar target/stbe-1.1.jar
