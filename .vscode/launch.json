@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-OrderoBeApi<ordero>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.ft.OrderoBeApi",
+      "projectName": "ordero",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-StbeApi<stbe>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.ft.StbeApi",
+      "projectName": "stbe",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
