@@ -32,11 +32,9 @@ public class CorsFilterConfig implements Filter {
         String origin = req.getHeader("Origin");
         res.setHeader("Access-Control-Allow-Origin", allowedOrigins.contains(origin) ? origin : "*");
         res.setHeader("Access-Control-Allow-Credentials", "true");
-        // res.setHeader("Vary", "Origin");
         res.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE, PATCH, PUT, OPTIONS");
         res.setHeader("Access-Control-Allow-Headers", "*");
         res.setHeader("Access-Control-Expose-Headers", "Authorization");
-        // Just REPLY OK if request method is OPTIONS for CORS (pre-flight)
         if (req.getMethod().equals("OPTIONS")) {
             res.setHeader("Access-Control-Max-Age", "86400");
             res.setStatus(HttpServletResponse.SC_OK);

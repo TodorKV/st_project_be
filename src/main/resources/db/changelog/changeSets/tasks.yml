@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: 13
-      author: Dimitar Grivov
+      author: Todor Valkov
       preConditions:
         onFail: MARK_RAN
         not:

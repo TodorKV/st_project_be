@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: 15
-      author: Dimitar Grivov
+      author: Todor Valkov
       preConditions:
         onFail: MARK_RAN
         not:
@@ -26,7 +26,7 @@ databaseChangeLog:
                   type: int
   - changeSet:
       id: 16
-      author: Dimitar Grivov
+      author: Todor Valkov
       changes:
         - addColumn:
             tableName: stocks

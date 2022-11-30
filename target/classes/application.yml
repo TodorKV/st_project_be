@@ -6,9 +6,9 @@ spring:
       enabled: always
   datasource:
     #postgresql://containers-us-west-72.railway.app:6428/railway
-    url: jdbc:postgresql://containers-us-west-72.railway.app:6428/railway
+    url: jdbc:postgresql://localhost:5432/stdb
     username: postgres
-    password: H6CoSwgZsSQBHSXG3tbf
+    password: root
   liquibase:
     change-log: classpath:db/changelog/db-changelog.yml
   jpa:
